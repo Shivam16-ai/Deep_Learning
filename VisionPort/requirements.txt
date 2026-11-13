@@ -1,0 +1,22 @@
+# VisionPort Dependencies
+# Python 3.12.7 Compatibility on Windows 10/11
+
+# Deep Learning - YOLO & Tracking
+ultralytics>=8.3.0
+lap>=0.5.12
+
+# Computer Vision
+opencv-python>=4.10.0.84
+
+# Numerical Computing
+numpy>=1.26.4,<3.0.0
+
+# Configuration Management
+pyyaml>=6.0.2
+
+# Image and Data Utilities
+pillow>=10.4.0
+matplotlib>=3.9.2
+
+# Testing & Quality
+pytest>=8.3.3

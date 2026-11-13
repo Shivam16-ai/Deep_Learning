@@ -1,0 +1,102 @@
+/* ==========================================================================
+   VisionPort Design System - Responsive Breakpoints & Mobile Styles
+   ========================================================================== */
+
+/* Mobile Hamburger Toggle (hidden on desktop) */
+.mobile-nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 45;
+}
+
+/* Tablets and small desktops (<= 1200px) */
+@media (max-width: 1200px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .monitoring-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile & Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .sidebar {
+    transform: translateX(-100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+  }
+
+  .main-wrapper {
+    margin-left: 0;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .content-body {
+    padding: 1.25rem;
+  }
+
+  .topbar {
+    padding: 0 1.25rem;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-cols-2-1, .grid-cols-1-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Mobile Screens (<= 640px) */
+@media (max-width: 640px) {
+  .grid-cols-4, .grid-cols-3, .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar-right .datetime-display {
+    display: none;
+  }
+
+  .stat-card-value {
+    font-size: 1.5rem;
+  }
+
+  .video-controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls-group {
+    justify-content: center;
+  }
+}
+

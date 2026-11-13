@@ -1,0 +1,261 @@
+/* ==========================================================================
+   VisionPort Design System - Dashboard & Page Specific Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Grid Layouts
+   -------------------------------------------------------------------------- */
+.dashboard-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-1-2 {
+  grid-template-columns: 1fr 2fr;
+}
+
+.grid-cols-2-1 {
+  grid-template-columns: 2fr 1fr;
+}
+
+/* --------------------------------------------------------------------------
+   Chart Cards & Containers
+   -------------------------------------------------------------------------- */
+.chart-card {
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-wrapper {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: 260px;
+}
+
+/* --------------------------------------------------------------------------
+   Live Video Monitoring & Player Layouts
+   -------------------------------------------------------------------------- */
+.monitoring-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+}
+
+.video-container {
+  background-color: #000000;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-stream-img, .video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.stream-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-muted);
+}
+
+.video-hud {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.hud-pill {
+  background: rgba(13, 19, 31, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-subtle);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.video-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.controls-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Image Comparison View (Task 6-8)
+   -------------------------------------------------------------------------- */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.image-preview-panel {
+  background-color: #060910;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-preview-header {
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image-preview-body {
+  flex: 1;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.image-preview-body img {
+  max-width: 100%;
+  max-height: 480px;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+}
+
+/* --------------------------------------------------------------------------
+   Traffic Signal Indicator Widget (Task 14)
+   -------------------------------------------------------------------------- */
+.signal-lamp-widget {
+  background-color: #0d121c;
+  border: 2px solid #1f2b3e;
+  border-radius: 24px;
+  padding: 1.25rem 0.75rem;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.5);
+  align-items: center;
+}
+
+.signal-lamp {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #1a2230;
+  border: 2px solid #27354d;
+  transition: all 0.3s ease;
+}
+
+.signal-lamp.red.active {
+  background-color: #ef4444;
+  box-shadow: 0 0 20px #ef4444, inset 0 0 10px #ffffff;
+  border-color: #fca5a5;
+}
+
+.signal-lamp.yellow.active {
+  background-color: #f59e0b;
+  box-shadow: 0 0 20px #f59e0b, inset 0 0 10px #ffffff;
+  border-color: #fde68a;
+}
+
+.signal-lamp.green.active {
+  background-color: #10b981;
+  box-shadow: 0 0 20px #10b981, inset 0 0 10px #ffffff;
+  border-color: #a7f3d0;
+}
+
+/* --------------------------------------------------------------------------
+   Activity Timeline & Feed
+   -------------------------------------------------------------------------- */
+.activity-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.75rem;
+  background-color: rgba(13, 19, 31, 0.4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.activity-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background-color: rgba(59, 130, 246, 0.15);
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.activity-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+

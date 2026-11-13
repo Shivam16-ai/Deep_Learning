@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Analysis – VisionPort</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <div class="sidebar-overlay"></div>
+
+  <div class="app-container">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div>
+          <span class="logo-text">VisionPort</span>
+          <span class="logo-tag">AI Traffic</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-section-title">Operations</span>
+        <a href="../index.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          Overview
+        </a>
+        <a href="monitoring.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          Live Monitoring
+        </a>
+        <a href="video-analysis.html" class="nav-link active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          Video Analysis
+        </a>
+
+        <span class="nav-section-title">Deep Learning</span>
+        <a href="detection.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+          Vehicle Detection
+        </a>
+        <a href="tracking.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          Vehicle Tracking
+        </a>
+
+        <span class="nav-section-title">Analytics & Control</span>
+        <a href="analytics.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Traffic Analytics
+        </a>
+        <a href="alerts.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          Congestion Alerts
+        </a>
+        <a href="signals.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="3" r="3"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path></svg>
+          Traffic Signals
+        </a>
+        <a href="waiting-time.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Waiting Time
+        </a>
+
+        <span class="nav-section-title">System</span>
+        <a href="reports.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Reports
+        </a>
+        <a href="settings.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="3" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-tag">
+          <div class="pulse-dot"></div>
+          <span>YOLOv8 + ByteTrack</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <div class="main-wrapper">
+      <!-- TOP NAVIGATION BAR -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="mobile-toggle" class="mobile-nav-toggle" aria-label="Toggle Navigation">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <h1 class="page-title">Video Analysis Pipeline</h1>
+        </div>
+
+        <div class="topbar-right">
+          <div id="backend-status-badge" class="status-badge offline">
+            <div class="indicator-dot"></div>
+            <span id="backend-status-text">Connecting...</span>
+          </div>
+          <span id="topbar-datetime" class="datetime-display">--:--:--</span>
+        </div>
+      </header>
+
+      <!-- CONTENT BODY -->
+      <main class="content-body">
+        <div class="dashboard-grid grid-cols-1-2">
+          <!-- Configuration Panel -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                Video Settings
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Select Dataset Video</label>
+              <select id="video-select" class="form-select">
+                <option value="sample_traffic.mp4">sample_traffic.mp4 (Default Synthetic Traffic)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Or Upload Custom MP4</label>
+              <input type="file" id="video-file-input" class="form-control" accept="video/mp4,video/avi,video/mov" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Confidence Threshold: <span id="conf-val" style="color: var(--accent-cyan);">0.40</span></label>
+              <input type="range" id="conf-slider" class="form-range" min="0.10" max="0.90" step="0.05" value="0.40" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Max Frames to Process</label>
+              <select id="max-frames-select" class="form-select">
+                <option value="60">60 Frames (Quick Test)</option>
+                <option value="120" selected>120 Frames (Standard)</option>
+                <option value="300">300 Frames (Extended)</option>
+                <option value="0">All Frames (Full Video)</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-top: 1.5rem;">
+              <button id="btn-start-analysis" class="btn btn-primary" style="width: 100%;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                Execute Analysis
+              </button>
+            </div>
+
+            <div id="video-progress" style="display: none; margin-top: 1rem; text-align: center;">
+              <div class="spinner" style="margin: 0 auto 0.5rem auto;"></div>
+              <p style="font-size: 0.8rem; color: var(--text-secondary);">Processing video with YOLOv8 & ByteTrack...</p>
+            </div>
+          </div>
+
+          <!-- Video Output & Player Panel -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                Processed Video Stream
+              </div>
+              <a id="download-video-btn" href="#" download class="btn btn-secondary" style="display: none; padding: 0.35rem 0.75rem; font-size: 0.75rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download MP4
+              </a>
+            </div>
+
+            <div id="video-player-container" class="video-container" style="min-height: 380px;">
+              <video id="output-video-player" class="video-player" controls preload="auto" playsinline style="display: none; width: 100%; max-height: 480px;">
+                <source id="video-source" src="" type="video/mp4" />
+                Your browser does not support HTML5 video playback.
+              </video>
+              <div id="video-placeholder" class="stream-placeholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                <p>Run analysis to preview the annotated video.</p>
+              </div>
+            </div>
+
+            <!-- Analysis Summary Metrics -->
+            <div id="analysis-summary-box" class="dashboard-grid grid-cols-4" style="margin-top: 1.25rem; display: none;">
+              <div class="stat-card" style="padding: 0.85rem; background-color: var(--bg-input);">
+                <span class="stat-card-label">Processed</span>
+                <div class="stat-card-value" id="res-frames">--</div>
+              </div>
+              <div class="stat-card" style="padding: 0.85rem; background-color: var(--bg-input);">
+                <span class="stat-card-label">Average FPS</span>
+                <div class="stat-card-value" id="res-fps">--</div>
+              </div>
+              <div class="stat-card" style="padding: 0.85rem; background-color: var(--bg-input);">
+                <span class="stat-card-label">Unique Vehicles</span>
+                <div class="stat-card-value" id="res-unique">--</div>
+              </div>
+              <div class="stat-card" style="padding: 0.85rem; background-color: var(--bg-input);">
+                <span class="stat-card-label">Speed Unit</span>
+                <div class="stat-card-value" id="res-speed">--</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const confSlider = document.getElementById("conf-slider");
+      const confVal = document.getElementById("conf-val");
+      if (confSlider && confVal) {
+        confSlider.addEventListener("input", (e) => {
+          confVal.textContent = parseFloat(e.target.value).toFixed(2);
+        });
+      }
+
+      // Populate videos
+      api.getDatasetVideos().then(data => {
+        const select = document.getElementById("video-select");
+        if (data && data.videos && select) {
+          select.innerHTML = "";
+          data.videos.forEach(v => {
+            const opt = document.createElement("option");
+            opt.value = v.filename;
+            opt.textContent = `${v.filename} (${v.size_mb} MB)`;
+            select.appendChild(opt);
+          });
+        }
+      });
+
+      // Handle Analysis
+      const startBtn = document.getElementById("btn-start-analysis");
+      const progressBox = document.getElementById("video-progress");
+      const player = document.getElementById("output-video-player");
+      const placeholder = document.getElementById("video-placeholder");
+      const summaryBox = document.getElementById("analysis-summary-box");
+      const downloadBtn = document.getElementById("download-video-btn");
+
+      // Video player error listener
+      player.addEventListener("error", () => {
+        console.error("Video player error:", player.error);
+        let errorMsg = "Unable to play processed video.";
+        if (player.error) {
+          switch (player.error.code) {
+            case player.error.MEDIA_ERR_ABORTED:
+              errorMsg = "Video playback was aborted.";
+              break;
+            case player.error.MEDIA_ERR_NETWORK:
+              errorMsg = "Network error while downloading the video stream.";
+              break;
+            case player.error.MEDIA_ERR_DECODE:
+              errorMsg = "Video decoding error: media format or codec is incompatible.";
+              break;
+            case player.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
+              errorMsg = "Video format not supported or video file could not be found (404/500).";
+              break;
+            default:
+              errorMsg = `Playback error code ${player.error.code}`;
+          }
+        }
+        showToast(`Video Error: ${errorMsg}`, "danger");
+      });
+
+      player.addEventListener("loadedmetadata", () => {
+        console.log(`Video metadata ready: duration=${player.duration.toFixed(2)}s, resolution=${player.videoWidth}x${player.videoHeight}`);
+      });
+
+      startBtn.addEventListener("click", async () => {
+        const fileInput = document.getElementById("video-file-input");
+        const videoSelect = document.getElementById("video-select");
+        const maxFramesSelect = document.getElementById("max-frames-select");
+
+        const file = fileInput.files[0] || null;
+        const datasetVideo = file ? null : videoSelect.value;
+        const conf = parseFloat(confSlider.value);
+        const maxFrames = parseInt(maxFramesSelect.value) || 120;
+
+        try {
+          startBtn.disabled = true;
+          progressBox.style.display = "block";
+
+          const result = await api.analyzeVideo({
+            file,
+            datasetVideo,
+            conf,
+            maxFrames,
+          });
+
+          if (result && result.success) {
+            const videoUrl = result.output_video_url;
+
+            // Optional pre-flight verification
+            try {
+              const headCheck = await fetch(videoUrl, { method: "HEAD" });
+              if (!headCheck.ok) {
+                showToast(`Server warning: video endpoint returned HTTP ${headCheck.status}`, "danger");
+              }
+            } catch (headErr) {
+              console.warn("Pre-flight check failed:", headErr);
+            }
+
+            placeholder.style.display = "none";
+            player.style.display = "block";
+
+            const sourceEl = document.getElementById("video-source");
+            if (sourceEl) {
+              sourceEl.src = videoUrl;
+              sourceEl.type = "video/mp4";
+            }
+            player.src = videoUrl;
+            player.load();
+
+            const playPromise = player.play();
+            if (playPromise !== undefined) {
+              playPromise.catch((err) => {
+                console.log("Autoplay paused (browser policy requires user interaction):", err);
+              });
+            }
+
+            downloadBtn.style.display = "inline-flex";
+            downloadBtn.href = videoUrl;
+            downloadBtn.setAttribute("download", videoUrl.split("/").pop());
+
+            summaryBox.style.display = "grid";
+            document.getElementById("res-frames").textContent = result.frames_processed;
+            document.getElementById("res-fps").textContent = result.average_fps;
+            document.getElementById("res-unique").textContent = result.unique_vehicle_counts?.total || 0;
+            document.getElementById("res-speed").textContent = result.speed_unit;
+
+            showToast("Video processing completed successfully!", "success");
+          }
+        } catch (err) {
+          showToast(`Processing failed: ${err.message}`, "danger");
+        } finally {
+          startBtn.disabled = false;
+          progressBox.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

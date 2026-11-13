@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vehicle Detection – VisionPort</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <div class="sidebar-overlay"></div>
+
+  <div class="app-container">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div>
+          <span class="logo-text">VisionPort</span>
+          <span class="logo-tag">AI Traffic</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-section-title">Operations</span>
+        <a href="../index.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          Overview
+        </a>
+        <a href="monitoring.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          Live Monitoring
+        </a>
+        <a href="video-analysis.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          Video Analysis
+        </a>
+
+        <span class="nav-section-title">Deep Learning</span>
+        <a href="detection.html" class="nav-link active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+          Vehicle Detection
+        </a>
+        <a href="tracking.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          Vehicle Tracking
+        </a>
+
+        <span class="nav-section-title">Analytics & Control</span>
+        <a href="analytics.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Traffic Analytics
+        </a>
+        <a href="alerts.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          Congestion Alerts
+        </a>
+        <a href="signals.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="3" r="3"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path></svg>
+          Traffic Signals
+        </a>
+        <a href="waiting-time.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Waiting Time
+        </a>
+
+        <span class="nav-section-title">System</span>
+        <a href="reports.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Reports
+        </a>
+        <a href="settings.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="3" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-tag">
+          <div class="pulse-dot"></div>
+          <span>YOLOv8 Inference</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <div class="main-wrapper">
+      <!-- TOP NAVIGATION BAR -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="mobile-toggle" class="mobile-nav-toggle" aria-label="Toggle Navigation">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <h1 class="page-title">Vehicle Detection (YOLOv8)</h1>
+        </div>
+
+        <div class="topbar-right">
+          <div id="backend-status-badge" class="status-badge offline">
+            <div class="indicator-dot"></div>
+            <span id="backend-status-text">Connecting...</span>
+          </div>
+          <span id="topbar-datetime" class="datetime-display">--:--:--</span>
+        </div>
+      </header>
+
+      <!-- CONTENT BODY -->
+      <main class="content-body">
+        <!-- Configuration Controls Card -->
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <div class="card-header">
+            <div class="card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+              Select or Upload Traffic Image
+            </div>
+          </div>
+
+          <div class="dashboard-grid grid-cols-3" style="align-items: flex-end; margin-bottom: 0;">
+            <!-- Dropzone / File Picker -->
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label">Upload Traffic Image</label>
+              <div id="upload-dropzone" style="border: 2px dashed var(--border-default); border-radius: var(--radius-md); padding: 1rem; text-align: center; cursor: pointer; background: var(--bg-input);">
+                <input type="file" id="image-upload-input" accept="image/*" style="display: none;" />
+                <label for="image-upload-input" style="cursor: pointer; display: block;">
+                  <span style="font-size: 0.85rem; color: var(--accent-blue); font-weight: 600;">Choose file</span> or drag & drop
+                </label>
+                <span id="selected-filename" style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Supports JPG, PNG, WEBP</span>
+              </div>
+            </div>
+
+            <!-- Dataset Dropdown -->
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label">Or Pick From Real Dataset (20 Images)</label>
+              <select id="dataset-image-select" class="form-select">
+                <option value="">-- Choose from dataset/images/ --</option>
+              </select>
+            </div>
+
+            <!-- Slider & Run Button -->
+            <div style="display: flex; gap: 1rem; align-items: flex-end;">
+              <div style="flex: 1;">
+                <label class="form-label">Confidence: <span id="conf-value" style="color: var(--accent-cyan);">0.40</span></label>
+                <input type="range" id="conf-slider" class="form-range" min="0.10" max="0.90" step="0.05" value="0.40" />
+              </div>
+              <button id="btn-run-detection" class="btn btn-primary" disabled style="height: 42px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                Run Detection
+              </button>
+            </div>
+          </div>
+
+          <div id="detection-loading" style="display: none; align-items: center; justify-content: center; gap: 0.75rem; margin-top: 1rem;">
+            <div class="spinner"></div>
+            <span style="font-size: 0.85rem; color: var(--text-secondary);">Executing Ultralytics YOLOv8 inference...</span>
+          </div>
+        </div>
+
+        <!-- Metric Badges Row -->
+        <div class="dashboard-grid grid-cols-4">
+          <div class="stat-card" style="padding: 1rem;">
+            <span class="stat-card-label">Total Detected</span>
+            <div class="stat-card-value" id="det-total">--</div>
+          </div>
+          <div class="stat-card" style="padding: 1rem;">
+            <span class="stat-card-label">Cars (ID 2)</span>
+            <div class="stat-card-value" id="det-cars">--</div>
+          </div>
+          <div class="stat-card" style="padding: 1rem;">
+            <span class="stat-card-label">Motorcycles (ID 3)</span>
+            <div class="stat-card-value" id="det-motorcycles">--</div>
+          </div>
+          <div class="stat-card" style="padding: 1rem;">
+            <span class="stat-card-label">Buses / Trucks (5 & 7)</span>
+            <div class="stat-card-value" id="det-buses">--</div>
+          </div>
+        </div>
+
+        <!-- Comparison Side-by-Side View -->
+        <div class="comparison-grid">
+          <!-- Original Image -->
+          <div class="image-preview-panel">
+            <div class="image-preview-header">
+              <span>Original Source Image</span>
+              <span class="badge badge-neutral">Raw Input</span>
+            </div>
+            <div class="image-preview-body">
+              <div id="orig-placeholder" class="empty-state">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <p>Select or upload an image to view original preview.</p>
+              </div>
+              <img id="original-image-preview" src="" alt="Original" style="display: none;" />
+            </div>
+          </div>
+
+          <!-- Annotated Image -->
+          <div class="image-preview-panel">
+            <div class="image-preview-header">
+              <span>YOLOv8 Detection Output</span>
+              <span id="det-inference-time" class="badge badge-cyan">Inference Time: --</span>
+            </div>
+            <div class="image-preview-body">
+              <div id="annot-placeholder" class="empty-state">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                <p>Run detection to preview bounding boxes and labels.</p>
+              </div>
+              <img id="annotated-image-preview" src="" alt="Annotated" style="display: none;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Detection Results Details Table -->
+        <div class="card" style="margin-top: 1.5rem;">
+          <div class="card-header">
+            <div class="card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+              Detected Vehicle Records
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Class Name</th>
+                  <th>Confidence</th>
+                  <th>Bounding Box [x1, y1, x2, y2]</th>
+                  <th>Model Registry</th>
+                </tr>
+              </thead>
+              <tbody id="detections-table-body">
+                <tr>
+                  <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 2rem;">
+                    Run detection on an image to inspect detection coordinates.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/detection.js"></script>
+</body>
+</html>
+

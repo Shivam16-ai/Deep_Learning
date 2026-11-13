@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Settings – VisionPort</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <div class="sidebar-overlay"></div>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+        </div>
+        <div>
+          <span class="logo-text">VisionPort</span>
+          <span class="logo-tag">AI Traffic</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-section-title">Operations</span>
+        <a href="../index.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>Overview</a>
+        <a href="monitoring.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>Live Monitoring</a>
+        <a href="video-analysis.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>Video Analysis</a>
+
+        <span class="nav-section-title">Deep Learning</span>
+        <a href="detection.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>Vehicle Detection</a>
+        <a href="tracking.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>Vehicle Tracking</a>
+
+        <span class="nav-section-title">Analytics & Control</span>
+        <a href="analytics.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>Traffic Analytics</a>
+        <a href="alerts.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>Congestion Alerts</a>
+        <a href="signals.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="3" r="3"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path></svg>Traffic Signals</a>
+        <a href="waiting-time.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Waiting Time</a>
+
+        <span class="nav-section-title">System</span>
+        <a href="reports.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>Reports</a>
+        <a href="settings.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="3" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>Settings</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-tag">
+          <div class="pulse-dot"></div>
+          <span>Config Manager</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="mobile-toggle" class="mobile-nav-toggle" aria-label="Toggle Navigation">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <h1 class="page-title">System Configuration</h1>
+        </div>
+        <div class="topbar-right">
+          <div id="backend-status-badge" class="status-badge offline">
+            <div class="indicator-dot"></div>
+            <span id="backend-status-text">Connecting...</span>
+          </div>
+          <span id="topbar-datetime" class="datetime-display">--:--:--</span>
+        </div>
+      </header>
+
+      <main class="content-area">
+        <form id="settings-form">
+          <!-- YOLO Detection Configuration -->
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <div class="card-header">
+              <h2 class="card-title">YOLOv8 Detection Settings</h2>
+              <p class="card-subtitle">Tune inference thresholds, model weights, and target vehicle classes</p>
+            </div>
+            <div class="card-body">
+              <div class="grid-2col">
+                <div class="form-group">
+                  <label class="form-label">YOLO Model Weights</label>
+                  <input type="text" id="model-name" class="form-control" value="yolov8n.pt" />
+                  <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Stored locally in models/</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">IOU Threshold</label>
+                  <input type="number" id="iou-threshold" class="form-control" step="0.05" min="0.1" max="0.9" value="0.45" />
+                  <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Non-maximum suppression threshold</span>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-top: 1rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                  <label class="form-label" style="margin-bottom: 0;">Confidence Threshold</label>
+                  <input type="number" id="conf-threshold-val" class="form-control" step="0.01" min="0.1" max="0.95" style="width: 80px; padding: 0.2rem 0.5rem; text-align: right;" value="0.40" />
+                </div>
+                <input type="range" id="conf-threshold" class="form-range" min="0.1" max="0.95" step="0.01" value="0.40" />
+              </div>
+
+              <div class="form-group" style="margin-top: 1.25rem;">
+                <label class="form-label">Target Vehicle Classes</label>
+                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                  <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-primary); font-size: 0.875rem;">
+                    <input type="checkbox" id="cls-car" checked /> Cars (COCO ID 2)
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-primary); font-size: 0.875rem;">
+                    <input type="checkbox" id="cls-motorcycle" checked /> Motorcycles (COCO ID 3)
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-primary); font-size: 0.875rem;">
+                    <input type="checkbox" id="cls-bus" checked /> Buses (COCO ID 5)
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-primary); font-size: 0.875rem;">
+                    <input type="checkbox" id="cls-truck" checked /> Trucks (COCO ID 7)
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tracking & Speed Settings -->
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <div class="card-header">
+              <h2 class="card-title">Tracking & Speed Calibration</h2>
+              <p class="card-subtitle">Configure ByteTrack parameters and camera perspective calibration</p>
+            </div>
+            <div class="card-body">
+              <div class="grid-2col">
+                <div class="form-group">
+                  <label class="form-label">ByteTrack Buffer (frames)</label>
+                  <input type="number" id="track-buffer" class="form-control" min="5" max="120" value="30" />
+                  <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Max frames to preserve lost tracks</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Tracking Confidence Threshold</label>
+                  <input type="number" id="track-thresh" class="form-control" step="0.05" min="0.1" max="0.9" value="0.5" />
+                  <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Minimum score to initiate new track</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Pixels per Meter (PPM)</label>
+                  <input type="number" id="ppm-scale" class="form-control" step="0.5" min="1.0" max="100.0" value="15.0" />
+                  <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Calibration scale for speed in km/h</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Video Processing FPS</label>
+                  <input type="number" id="speed-fps" class="form-control" min="1" max="120" value="30" />
+                  <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Base timestamp interval for displacement</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Density & Queue Settings -->
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <div class="card-header">
+              <h2 class="card-title">Density Thresholds & Queue Zone</h2>
+              <p class="card-subtitle">Define volume classification bounds and intersection stopline ROI</p>
+            </div>
+            <div class="card-body">
+              <div class="grid-2col">
+                <div class="form-group">
+                  <label class="form-label">LOW Density Threshold (vehicles)</label>
+                  <input type="number" id="thresh-low" class="form-control" min="1" max="20" value="3" />
+                  <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Counts &lt;= this are LOW</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">MEDIUM Density Threshold (vehicles)</label>
+                  <input type="number" id="thresh-medium" class="form-control" min="2" max="50" value="7" />
+                  <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Counts &gt; this are classified HIGH</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Queue Zone Y-Min (%)</label>
+                  <input type="number" id="queue-ymin" class="form-control" min="0" max="100" value="60" />
+                  <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Top boundary of stopline queue box</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Queue Zone Y-Max (%)</label>
+                  <input type="number" id="queue-ymax" class="form-control" min="0" max="100" value="95" />
+                  <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Bottom boundary of stopline queue box</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div style="display: flex; gap: 1rem; justify-content: flex-end; margin-bottom: 2rem;">
+            <button type="button" id="reset-settings-btn" class="btn btn-secondary">
+              Reset to Saved
+            </button>
+            <button type="submit" id="save-settings-btn" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                <polyline points="7 3 7 8 15 8"></polyline>
+              </svg>
+              Save Configuration
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/settings.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,98 @@
+camera:
+  device_index: 0
+  fps: 30
+  frame_height: 720
+  frame_width: 1280
+density:
+  low_threshold: 3
+detection:
+  confidence_threshold: 0.4
+  iou_threshold: 0.45
+  model_name: yolov8n.pt
+  target_classes:
+    bus: 5
+    car: 2
+    motorcycle: 3
+    truck: 7
+logging:
+  format: '%(asctime)s - [%(levelname)s] - %(name)s - %(message)s'
+  level: INFO
+  log_file: visionport.log
+paths:
+  analytics_dir: output/analytics
+  captures_dir: captures
+  dataset_images_dir: dataset/images
+  dataset_videos_dir: dataset/videos
+  detected_images_dir: output/detected_images
+  extracted_frames_dir: output/extracted_frames
+  models_dir: models
+  output_dir: output
+  processed_videos_dir: output/processed_videos
+  reports_dir: output/reports
+project:
+  description: Intelligent Vehicle Detection and Traffic Monitoring Using Deep Learning
+  name: VisionPort
+  version: 0.1.0
+speed_estimation:
+  calibrated: false
+  homography:
+    enabled: false
+    image_points: null
+    world_points: null
+  max_speed_kmh: 250.0
+  min_frames_for_speed: 3
+  pixels_per_meter: null
+  smoothing_window: 7
+tracking:
+  draw_trajectory: true
+  match_thresh: 0.8
+  min_track_frames: 3
+  new_track_thresh: 0.6
+  track_buffer: 30
+  track_high_thresh: 0.5
+  track_low_thresh: 0.1
+  tracker_type: bytetrack
+  trajectory_length: 40
+traffic_analysis:
+  congestion:
+    speed_threshold_kmh: 15.0
+    stationary_time_sec: 10.0
+  counting:
+    line_position_y_ratio: 0.6
+    roi_polygon: null
+  density:
+    high_threshold: 25
+    low_threshold: 5
+    medium_threshold: 15
+  signal_detection:
+    color_ranges:
+      green:
+      - - 40
+        - 100
+        - 100
+      - - 85
+        - 255
+        - 255
+      red:
+      - - 0
+        - 100
+        - 100
+      - - 10
+        - 255
+        - 255
+      yellow:
+      - - 15
+        - 100
+        - 100
+      - - 35
+        - 255
+        - 255
+  speed_estimation:
+    fps: 30
+    pixels_per_meter: null
+  waiting_time:
+    queue_zone_y_max: 0.9
+    queue_zone_y_min: 0.5
+video_processing:
+  display_fps: 30
+  frame_extract_interval: 10

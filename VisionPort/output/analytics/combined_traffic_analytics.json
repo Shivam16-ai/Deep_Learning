@@ -1,0 +1,610 @@
+{
+  "total_images_processed": 20,
+  "counting_summary": {
+    "total_frames_analyzed": 20,
+    "peak_vehicles_in_single_frame": 24,
+    "average_vehicles_per_frame": 10.5,
+    "cumulative_category_counts": {
+      "car": 180,
+      "motorcycle": 2,
+      "bus": 24,
+      "truck": 4
+    }
+  },
+  "density_summary": {
+    "total_frames_analyzed": 20,
+    "level_distribution_frames": {
+      "LOW": 6,
+      "MEDIUM": 9,
+      "HIGH": 5
+    },
+    "level_distribution_percent": {
+      "LOW": 30.0,
+      "MEDIUM": 45.0,
+      "HIGH": 25.0
+    },
+    "total_state_transitions": 14,
+    "state_transitions": [
+      {
+        "frame_index": 1,
+        "timestamp_sec": 1.0,
+        "from_level": "LOW",
+        "to_level": "MEDIUM",
+        "vehicle_count": 13,
+        "occupancy_percent": 4.09,
+        "description": "Traffic transitioned from LOW to MEDIUM"
+      },
+      {
+        "frame_index": 2,
+        "timestamp_sec": 2.0,
+        "from_level": "MEDIUM",
+        "to_level": "HIGH",
+        "vehicle_count": 18,
+        "occupancy_percent": 27.25,
+        "description": "Traffic transitioned from MEDIUM to HIGH"
+      },
+      {
+        "frame_index": 3,
+        "timestamp_sec": 3.0,
+        "from_level": "HIGH",
+        "to_level": "MEDIUM",
+        "vehicle_count": 15,
+        "occupancy_percent": 18.04,
+        "description": "Traffic transitioned from HIGH to MEDIUM"
+      },
+      {
+        "frame_index": 5,
+        "timestamp_sec": 5.0,
+        "from_level": "MEDIUM",
+        "to_level": "LOW",
+        "vehicle_count": 3,
+        "occupancy_percent": 10.8,
+        "description": "Traffic transitioned from MEDIUM to LOW"
+      },
+      {
+        "frame_index": 6,
+        "timestamp_sec": 6.0,
+        "from_level": "LOW",
+        "to_level": "MEDIUM",
+        "vehicle_count": 12,
+        "occupancy_percent": 56.82,
+        "description": "Traffic transitioned from LOW to MEDIUM"
+      },
+      {
+        "frame_index": 8,
+        "timestamp_sec": 8.0,
+        "from_level": "MEDIUM",
+        "to_level": "LOW",
+        "vehicle_count": 0,
+        "occupancy_percent": 0.0,
+        "description": "Traffic transitioned from MEDIUM to LOW"
+      },
+      {
+        "frame_index": 9,
+        "timestamp_sec": 9.0,
+        "from_level": "LOW",
+        "to_level": "MEDIUM",
+        "vehicle_count": 15,
+        "occupancy_percent": 14.48,
+        "description": "Traffic transitioned from LOW to MEDIUM"
+      },
+      {
+        "frame_index": 10,
+        "timestamp_sec": 10.0,
+        "from_level": "MEDIUM",
+        "to_level": "LOW",
+        "vehicle_count": 1,
+        "occupancy_percent": 0.08,
+        "description": "Traffic transitioned from MEDIUM to LOW"
+      },
+      {
+        "frame_index": 11,
+        "timestamp_sec": 11.0,
+        "from_level": "LOW",
+        "to_level": "HIGH",
+        "vehicle_count": 24,
+        "occupancy_percent": 17.19,
+        "description": "Traffic transitioned from LOW to HIGH"
+      },
+      {
+        "frame_index": 13,
+        "timestamp_sec": 13.0,
+        "from_level": "HIGH",
+        "to_level": "MEDIUM",
+        "vehicle_count": 9,
+        "occupancy_percent": 10.42,
+        "description": "Traffic transitioned from HIGH to MEDIUM"
+      },
+      {
+        "frame_index": 14,
+        "timestamp_sec": 14.0,
+        "from_level": "MEDIUM",
+        "to_level": "HIGH",
+        "vehicle_count": 17,
+        "occupancy_percent": 64.9,
+        "description": "Traffic transitioned from MEDIUM to HIGH"
+      },
+      {
+        "frame_index": 15,
+        "timestamp_sec": 15.0,
+        "from_level": "HIGH",
+        "to_level": "LOW",
+        "vehicle_count": 0,
+        "occupancy_percent": 0.0,
+        "description": "Traffic transitioned from HIGH to LOW"
+      },
+      {
+        "frame_index": 17,
+        "timestamp_sec": 17.0,
+        "from_level": "LOW",
+        "to_level": "HIGH",
+        "vehicle_count": 18,
+        "occupancy_percent": 33.26,
+        "description": "Traffic transitioned from LOW to HIGH"
+      },
+      {
+        "frame_index": 18,
+        "timestamp_sec": 18.0,
+        "from_level": "HIGH",
+        "to_level": "MEDIUM",
+        "vehicle_count": 14,
+        "occupancy_percent": 51.14,
+        "description": "Traffic transitioned from HIGH to MEDIUM"
+      }
+    ],
+    "thresholds": {
+      "low": 5,
+      "medium": 15,
+      "high": 25
+    }
+  },
+  "congestion_summary": {
+    "total_frames_analyzed": 20,
+    "total_congestion_events": 0,
+    "total_congested_time_sec": 0,
+    "average_event_duration_sec": 0.0,
+    "maximum_event_duration_sec": 0.0,
+    "percent_time_congested": 0.0,
+    "events": []
+  },
+  "density_limitations": [
+    {
+      "limitation": "Vehicle Heterogeneity",
+      "impact": "Buses and trucks occupy significantly more road space than cars or motorcycles."
+    },
+    {
+      "limitation": "Perspective Distortion",
+      "impact": "Monocular 2D perspectives compress background vehicles, causing spatial distortion."
+    },
+    {
+      "limitation": "Flow Decoupling",
+      "impact": "Count does not capture vehicle velocity (moving traffic vs. stationary gridlock)."
+    },
+    {
+      "limitation": "Occlusion in Dense Queues",
+      "impact": "Large vehicles occlude smaller vehicles in adjacent lanes at oblique angles."
+    }
+  ],
+  "batch_timeline": [
+    {
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "detections_count": 2,
+      "counted_vehicles": 2,
+      "counts_by_class": {
+        "car": 1,
+        "motorcycle": 0,
+        "bus": 1,
+        "truck": 0
+      },
+      "density_level": "LOW",
+      "density_score": 0.08,
+      "occupancy_percent": 1.39,
+      "is_congested": false,
+      "congestion_status": "FREE_FLOW",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "360_F_194698869_ukzMbbk4V7TGO9NQhHhtXnAiI9NXxUgh.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_360_F_194698869_ukzMbbk4V7TGO9NQhHhtXnAiI9NXxUgh.jpg"
+    },
+    {
+      "frame_index": 1,
+      "timestamp_sec": 1.0,
+      "detections_count": 13,
+      "counted_vehicles": 13,
+      "counts_by_class": {
+        "car": 13,
+        "motorcycle": 0,
+        "bus": 0,
+        "truck": 0
+      },
+      "density_level": "MEDIUM",
+      "density_score": 0.52,
+      "occupancy_percent": 4.09,
+      "is_congested": false,
+      "congestion_status": "MODERATE",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "360_F_265114894_TMz40pDjvw0CHOt8UsdsUtLCChK6Sbhl.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_360_F_265114894_TMz40pDjvw0CHOt8UsdsUtLCChK6Sbhl.jpg"
+    },
+    {
+      "frame_index": 2,
+      "timestamp_sec": 2.0,
+      "detections_count": 18,
+      "counted_vehicles": 18,
+      "counts_by_class": {
+        "car": 18,
+        "motorcycle": 0,
+        "bus": 0,
+        "truck": 0
+      },
+      "density_level": "HIGH",
+      "density_score": 0.72,
+      "occupancy_percent": 27.25,
+      "is_congested": false,
+      "congestion_status": "FREE_FLOW",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "aerial-view-congested-multilane-highway-showing-heavy-traffic-jam-with-vehicles-bumper-b_871349-73281.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_aerial-view-congested-multilane-highway-showing-heavy-traffic-jam-with-vehicles-bumper-b_871349-73281.jpg"
+    },
+    {
+      "frame_index": 3,
+      "timestamp_sec": 3.0,
+      "detections_count": 15,
+      "counted_vehicles": 15,
+      "counts_by_class": {
+        "car": 11,
+        "motorcycle": 2,
+        "bus": 1,
+        "truck": 1
+      },
+      "density_level": "MEDIUM",
+      "density_score": 0.6,
+      "occupancy_percent": 18.04,
+      "is_congested": false,
+      "congestion_status": "MODERATE",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "aerial-view-of-bengaluru-city-traffic-near-town-hall-bengaluru-india.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_aerial-view-of-bengaluru-city-traffic-near-town-hall-bengaluru-india.jpg"
+    },
+    {
+      "frame_index": 4,
+      "timestamp_sec": 4.0,
+      "detections_count": 9,
+      "counted_vehicles": 9,
+      "counts_by_class": {
+        "car": 6,
+        "motorcycle": 0,
+        "bus": 3,
+        "truck": 0
+      },
+      "density_level": "MEDIUM",
+      "density_score": 0.36,
+      "occupancy_percent": 42.89,
+      "is_congested": false,
+      "congestion_status": "MODERATE",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "free-photo-of-busy-urban-traffic-jam-captured-from-above.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_free-photo-of-busy-urban-traffic-jam-captured-from-above.jpg"
+    },
+    {
+      "frame_index": 5,
+      "timestamp_sec": 5.0,
+      "detections_count": 3,
+      "counted_vehicles": 3,
+      "counts_by_class": {
+        "car": 1,
+        "motorcycle": 0,
+        "bus": 2,
+        "truck": 0
+      },
+      "density_level": "LOW",
+      "density_score": 0.12,
+      "occupancy_percent": 10.8,
+      "is_congested": false,
+      "congestion_status": "FREE_FLOW",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "images.jpg",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_images.jpg"
+    },
+    {
+      "frame_index": 6,
+      "timestamp_sec": 6.0,
+      "detections_count": 12,
+      "counted_vehicles": 12,
+      "counts_by_class": {
+        "car": 12,
+        "motorcycle": 0,
+        "bus": 0,
+        "truck": 0
+      },
+      "density_level": "MEDIUM",
+      "density_score": 0.48,
+      "occupancy_percent": 56.82,
+      "is_congested": false,
+      "congestion_status": "MODERATE",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "mumbai-india-july-2016-traffic-260nw-454681642.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_mumbai-india-july-2016-traffic-260nw-454681642.jpg"
+    },
+    {
+      "frame_index": 7,
+      "timestamp_sec": 7.0,
+      "detections_count": 9,
+      "counted_vehicles": 9,
+      "counts_by_class": {
+        "car": 8,
+        "motorcycle": 0,
+        "bus": 1,
+        "truck": 0
+      },
+      "density_level": "MEDIUM",
+      "density_score": 0.36,
+      "occupancy_percent": 20.46,
+      "is_congested": false,
+      "congestion_status": "MODERATE",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "new-delhi-india-heavy-traffic-jam-at-south-ext-ahead-of-diwali-festival-on-october-26-2024-in.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_new-delhi-india-heavy-traffic-jam-at-south-ext-ahead-of-diwali-festival-on-october-26-2024-in.jpg"
+    },
+    {
+      "frame_index": 8,
+      "timestamp_sec": 8.0,
+      "detections_count": 0,
+      "counted_vehicles": 0,
+      "counts_by_class": {
+        "car": 0,
+        "motorcycle": 0,
+        "bus": 0,
+        "truck": 0
+      },
+      "density_level": "LOW",
+      "density_score": 0.0,
+      "occupancy_percent": 0.0,
+      "is_congested": false,
+      "congestion_status": "FREE_FLOW",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "photo-1519994007676-baabab4bf574.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_photo-1519994007676-baabab4bf574.jpg"
+    },
+    {
+      "frame_index": 9,
+      "timestamp_sec": 9.0,
+      "detections_count": 15,
+      "counted_vehicles": 15,
+      "counts_by_class": {
+        "car": 13,
+        "motorcycle": 0,
+        "bus": 0,
+        "truck": 2
+      },
+      "density_level": "MEDIUM",
+      "density_score": 0.6,
+      "occupancy_percent": 14.48,
+      "is_congested": false,
+      "congestion_status": "MODERATE",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "photo-1530685932526-48ec92998eaa.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_photo-1530685932526-48ec92998eaa.jpg"
+    },
+    {
+      "frame_index": 10,
+      "timestamp_sec": 10.0,
+      "detections_count": 1,
+      "counted_vehicles": 1,
+      "counts_by_class": {
+        "car": 1,
+        "motorcycle": 0,
+        "bus": 0,
+        "truck": 0
+      },
+      "density_level": "LOW",
+      "density_score": 0.04,
+      "occupancy_percent": 0.08,
+      "is_congested": false,
+      "congestion_status": "FREE_FLOW",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "photo-1569261655993-3ae347322edd.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_photo-1569261655993-3ae347322edd.jpg"
+    },
+    {
+      "frame_index": 11,
+      "timestamp_sec": 11.0,
+      "detections_count": 24,
+      "counted_vehicles": 24,
+      "counts_by_class": {
+        "car": 23,
+        "motorcycle": 0,
+        "bus": 1,
+        "truck": 0
+      },
+      "density_level": "HIGH",
+      "density_score": 0.96,
+      "occupancy_percent": 17.19,
+      "is_congested": false,
+      "congestion_status": "FREE_FLOW",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "photo-1589828155685-83225f7d91f3.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_photo-1589828155685-83225f7d91f3.jpg"
+    },
+    {
+      "frame_index": 12,
+      "timestamp_sec": 12.0,
+      "detections_count": 21,
+      "counted_vehicles": 21,
+      "counts_by_class": {
+        "car": 19,
+        "motorcycle": 0,
+        "bus": 2,
+        "truck": 0
+      },
+      "density_level": "HIGH",
+      "density_score": 0.84,
+      "occupancy_percent": 28.12,
+      "is_congested": false,
+      "congestion_status": "FREE_FLOW",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "photo-1597762333765-cbcd63dd8acc.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_photo-1597762333765-cbcd63dd8acc.jpg"
+    },
+    {
+      "frame_index": 13,
+      "timestamp_sec": 13.0,
+      "detections_count": 9,
+      "counted_vehicles": 9,
+      "counts_by_class": {
+        "car": 8,
+        "motorcycle": 0,
+        "bus": 1,
+        "truck": 0
+      },
+      "density_level": "MEDIUM",
+      "density_score": 0.36,
+      "occupancy_percent": 10.42,
+      "is_congested": false,
+      "congestion_status": "MODERATE",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "photo-1611147533125-9ca445f32036.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_photo-1611147533125-9ca445f32036.jpg"
+    },
+    {
+      "frame_index": 14,
+      "timestamp_sec": 14.0,
+      "detections_count": 17,
+      "counted_vehicles": 17,
+      "counts_by_class": {
+        "car": 16,
+        "motorcycle": 0,
+        "bus": 1,
+        "truck": 0
+      },
+      "density_level": "HIGH",
+      "density_score": 0.68,
+      "occupancy_percent": 64.9,
+      "is_congested": false,
+      "congestion_status": "FREE_FLOW",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "photo-1717039044041-82399017e236.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_photo-1717039044041-82399017e236.jpg"
+    },
+    {
+      "frame_index": 15,
+      "timestamp_sec": 15.0,
+      "detections_count": 0,
+      "counted_vehicles": 0,
+      "counts_by_class": {
+        "car": 0,
+        "motorcycle": 0,
+        "bus": 0,
+        "truck": 0
+      },
+      "density_level": "LOW",
+      "density_score": 0.0,
+      "occupancy_percent": 0.0,
+      "is_congested": false,
+      "congestion_status": "FREE_FLOW",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "sample_traffic.jpg",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_sample_traffic.jpg"
+    },
+    {
+      "frame_index": 16,
+      "timestamp_sec": 16.0,
+      "detections_count": 4,
+      "counted_vehicles": 4,
+      "counts_by_class": {
+        "car": 3,
+        "motorcycle": 0,
+        "bus": 1,
+        "truck": 0
+      },
+      "density_level": "LOW",
+      "density_score": 0.16,
+      "occupancy_percent": 2.67,
+      "is_congested": false,
+      "congestion_status": "FREE_FLOW",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "the-traffic-around-charminar-market-with-auo-rickshaws-and-cars-moving-in-the-main-street.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_the-traffic-around-charminar-market-with-auo-rickshaws-and-cars-moving-in-the-main-street.jpg"
+    },
+    {
+      "frame_index": 17,
+      "timestamp_sec": 17.0,
+      "detections_count": 18,
+      "counted_vehicles": 18,
+      "counts_by_class": {
+        "car": 13,
+        "motorcycle": 0,
+        "bus": 5,
+        "truck": 0
+      },
+      "density_level": "HIGH",
+      "density_score": 0.72,
+      "occupancy_percent": 33.26,
+      "is_congested": false,
+      "congestion_status": "FREE_FLOW",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "traffic-chaos-background-at-night.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_traffic-chaos-background-at-night.jpg"
+    },
+    {
+      "frame_index": 18,
+      "timestamp_sec": 18.0,
+      "detections_count": 14,
+      "counted_vehicles": 14,
+      "counts_by_class": {
+        "car": 14,
+        "motorcycle": 0,
+        "bus": 0,
+        "truck": 0
+      },
+      "density_level": "MEDIUM",
+      "density_score": 0.56,
+      "occupancy_percent": 51.14,
+      "is_congested": false,
+      "congestion_status": "MODERATE",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "traffic-jam-big-city_1319796-1268.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_traffic-jam-big-city_1319796-1268.jpg"
+    },
+    {
+      "frame_index": 19,
+      "timestamp_sec": 19.0,
+      "detections_count": 6,
+      "counted_vehicles": 6,
+      "counts_by_class": {
+        "car": 0,
+        "motorcycle": 0,
+        "bus": 5,
+        "truck": 1
+      },
+      "density_level": "MEDIUM",
+      "density_score": 0.24,
+      "occupancy_percent": 24.18,
+      "is_congested": false,
+      "congestion_status": "MODERATE",
+      "active_congestion_duration": 0.0,
+      "alert_generated": false,
+      "image_name": "traffic-streets-india-rickshaw-motorbikes-cycles-ahmedabad-35389075.webp",
+      "saved_image": "C:\\Users\\st505\\OneDrive\\Desktop\\Deep Learning\\task\\VisionPort\\output\\detected_images\\analytics_traffic-streets-india-rickshaw-motorbikes-cycles-ahmedabad-35389075.jpg"
+    }
+  ]
+}
